@@ -1,0 +1,79 @@
+/* Estilos de las cartas*/
+
+.imgCard {
+    width: 100%;
+    border-radius: 12px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.cardPrenda {
+    background-color: white;
+    border: 1px solid #bacdd8;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.codigo,
+.id {
+    padding: 4px 8px;
+    border: 1px solid #e5eaed;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #788697;
+}
+
+.articulo {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    background-color: silver;
+    margin-bottom: 3%;
+}
+
+p {
+    font-size: 14px;
+    color: #7f8c9b;
+    line-height: 150%;
+}
+
+.btnCard {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px black;
+    font-weight: 600;
+    color: #0077ff;
+    background-color: #e0efff;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+.btnCard:hover {
+    background-color: #0077ff;
+    color: #e0efff;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.stock {
+    padding: 2%;
+    background-color: silver;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
