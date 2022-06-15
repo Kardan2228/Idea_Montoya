@@ -1,18 +1,30 @@
-import React from "react";
-import styles from "./App.module.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ItemDetailContainer from "./components/ItemDetailContainer.jsx";
 import ItemListContainer from "./components/ItemListContainer.jsx";
 import NavBar from "./components/NavBar.jsx";
 
 function App() {
 
-    return ( <
-        >
-        <
-        header className = { styles.header } > < NavBar / > < /header> <
-        ItemListContainer greeting = { 'Prendas para mujer' }
-        />   <
-        />
+    return (
+        <BrowserRouter>
+            <NavBar />
+            {/* <ItemCount /> */}
+            <Routes>
+
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/category/:id" element={<ItemListContainer />} />
+                <Route path="/item/:id" element={<ItemDetailContainer />} />
+
+            </Routes>
+
+        </BrowserRouter>
     );
 }
 
 export default App;
+
+{/* <>
+        <header className = { styles.header } > 
+        < NavBar /> </header> 
+        <ItemListContainer greeting = { 'Prendas para mujer' }/>   
+        </> */}
