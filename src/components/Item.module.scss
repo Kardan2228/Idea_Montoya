@@ -45,24 +45,6 @@ p {
     line-height: 150%;
 }
 
-.btnCard {
-    border: none;
-    padding: 6px 12px;
-    border-radius: 50px;
-    box-shadow: 3px 3px 3px black;
-    font-weight: 600;
-    color: #0077ff;
-    background-color: #e0efff;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
-}
-
-.btnCard:hover {
-    background-color: #0077ff;
-    color: #e0efff;
-}
-
 .precio {
     font-size: 16px;
     font-weight: 600;
@@ -76,4 +58,48 @@ p {
     text-align: center;
     color: black;
     font-weight: 600;
+}
+
+// .enlaceBoton {
+//     font-family: verdana, arial, sans-serif;
+//     font-size: 10pt;
+//     font-weight: bold;
+//     padding: 4px;
+//     background-color: #ffffcc;
+//     color: #666666;
+//     text-decoration: none;
+// }
+.enlaceBoton {
+    width: 80px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px black;
+    font-weight: 600;
+    color: #666666;
+    background-color: #ffffcc;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+.btnCard:hover {
+    background-color: #0077ff;
+    color: #e0efff;
+}
+
+// .enlaceBoton:link,
+// .enlaceBoton:visited {
+//     border-top: 1px solid #cccccc;
+//     border-bottom: 2px solid #666666;
+//     border-left: 1px solid #cccccc;
+//     border-right: 2px solid #666666;
+// }
+.enlaceBoton:hover {
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
 }

@@ -1,23 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from './ItemDetail';
 import data from '../helpers/data.js';
+import { useParams } from 'react-router-dom';
 
 
-export default function ItemDetailContainer({id}) {
-
+export default function ItemDetailContainer() {
+const {id} = useParams();
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(false);
 const [detalle, setDetalle] = useState({});
 
-//const idPrenda = ({id}); 
-
     useEffect(() => {
 
-        const itemDetalle = new Promise((res, rej) => {
-            
+        const itemDetalle = new Promise((res,) => {
+         
             setTimeout(() => {
                 res(data.find(item => item.id === id));
-            }, 2000);
+            }, 1000);
         });
 
         itemDetalle
@@ -26,22 +25,20 @@ const [detalle, setDetalle] = useState({});
           })
           .catch((error) => {
             setError(true);
-            console.log(error);
+            // console.log(error);
           })
           .finally(() => {
             setLoading(false);
 
           })
-      }, []);
+      }, [id]);
 
-    console.log('Este es el detalle' , detalle);
-    console.log(loading);
+    // console.log('Este es el detalle' , detalle);
+    // console.log(loading);
     console.log(error);
   return (
     <div>
-        <div>{loading && 'Cargando...'}
-        {id}
-        </div>
+        <div>{loading && 'Cargando...'}</div>
         <ItemDetail detalle={detalle}/>
     </div>
   )

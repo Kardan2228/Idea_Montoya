@@ -8,7 +8,6 @@ function App() {
     return (
         <BrowserRouter>
             <NavBar />
-            {/* <ItemCount /> */}
             <Routes>
 
                 <Route path="/" element={<ItemListContainer />} />
@@ -22,9 +21,3 @@ function App() {
 }
 
 export default App;
-
-{/* <>
-        <header className = { styles.header } > 
-        < NavBar /> </header> 
-        <ItemListContainer greeting = { 'Prendas para mujer' }/>   
-        </> */}

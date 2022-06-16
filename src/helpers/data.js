@@ -1,14 +1,13 @@
-const data =
-[
-    { id: "001", articulo: "Vestido", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Negro", tallas: "16-28", precio: "$2500.00", stock: 15 },
-    { id: "002", articulo: "Pantalón", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Rojo", tallas: "16-28", precio: "$1350.00", stock: 15 },
-    { id: "003", articulo: "Falda", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Azul", tallas: "16-28", precio: "$2400.00", stock: 15 },
-    { id: "004", articulo: "Pantalón corto", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Blanco", tallas: "16-28", precio: "$850.00", stock: 15 },
-    { id: "005", articulo: "Blusa", "imagen": "/images/blusa.png", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Naranja", tallas: "16-28", precio: "$1500.00", stock: 15 },
-    { id: "006", articulo: "Faldón", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Amarillo", tallas: "16-28", precio: "$3200.00", stock: 15 },
-    { id: "007", articulo: "Short", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Rosa", tallas: "16-28", precio: "$1750.00", stock: 15 },
-    { id: "008", articulo: "Pescador", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Beige", tallas: "16-28", precio: "$2700.00", stock: 15 },
-    { id: "009", articulo: "Enterizo", "imagen": "/images/vestido.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Violeta", tallas: "16-28", precio: "$1800.00", stock: 15 }
-  ]
+const data = [
+  { id: "001", articulo: "Vestido", categoria: "vestidos", imagen: "/images/vestido.png", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Negro", tallas: "16-28", precio: "$2500.00", stock: 15 },
+  { id: "002", articulo: "Pantalón", categoria: "pantalones", "imagen": "/images/pantalon.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Rojo", tallas: "16-28", precio: "$1350.00", stock: 7 },
+  { id: "003", articulo: "Falda", categoria: "faldas", "imagen": "/images/falda.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Azul", tallas: "16-28", precio: "$2400.00", stock: 20 },
+  { id: "004", articulo: "Pantalón corto", categoria: "pantalones", "imagen": "/images/pantalon_corto.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Blanco", tallas: "16-28", precio: "$850.00", stock: 5 },
+  { id: "005", articulo: "Blusa", categoria: "blusas", "imagen": "/images/blusa.png", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Naranja", tallas: "16-28", precio: "$1500.00", stock: 9 },
+  { id: "006", articulo: "Faldón", categoria: "faldas", "imagen": "/images/faldon.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Amarillo", tallas: "16-28", precio: "$3200.00", stock: 14 },
+  { id: "007", articulo: "Short", categoria: "pantalones", "imagen": "/images/short.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Rosa", tallas: "16-28", precio: "$1750.00", stock: 17 },
+  { id: "008", articulo: "Pescador", categoria: "pantalones", "imagen": "/images/pescador.jpg", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Beige", tallas: "16-28", precio: "$2700.00", stock: 6 },
+  { id: "009", articulo: "Enterizo", categoria: "vestidos", "imagen": "/images/enterizo.png", descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", color: "Violeta", tallas: "16-28", precio: "$1800.00", stock: 3 }
+]
 
-  export default data;
+export default data;
