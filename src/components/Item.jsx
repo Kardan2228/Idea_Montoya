@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./Item.module.scss";
-import ItemCount from "./ItemCount";
 
 const Item = (prenda) => {
     const {id, articulo, imagen, precio, stock} = prenda.prenda;
-    const onAdd = (count) => {
-        alert(`Se han agregado ${count} prendas a la cesta.`);
-      }
+
 
     return (
         <>
@@ -21,7 +18,7 @@ const Item = (prenda) => {
                     <p className={styles.stock}>Stock: {stock}</p>
                     <Link className={styles.enlaceBoton} to={`/item/${id}`} >Detalles</Link>
                 </div>
-                <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+            
             </div>
         </div>
         </>
