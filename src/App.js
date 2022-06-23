@@ -3,11 +3,13 @@ import Cart from "./components/Cart.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer.jsx";
 import ItemListContainer from "./components/ItemListContainer.jsx";
 import NavBar from "./components/NavBar.jsx";
+import MyProvider from "./context/CartContext";
 
 function App() {
 
     return (
         <BrowserRouter>
+        <MyProvider>
             <NavBar />
             <Routes>
 
@@ -17,7 +19,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
 
             </Routes>
-
+            </MyProvider> 
         </BrowserRouter>
     );
 }

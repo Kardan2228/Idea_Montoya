@@ -38,7 +38,8 @@ const NavBar = () => {
             <input className="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search" />
             <button className="btn btn-outline-info btn-outline-success" type="submit">Buscar</button>
           </form>
-          <CartWidget items={4}/>
+          {/* <CartWidget items={4}/> */}
+          <CartWidget/>
         </div>
       </div>
     </nav>

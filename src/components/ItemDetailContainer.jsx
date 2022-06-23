@@ -37,10 +37,11 @@ const [detalle, setDetalle] = useState({});
     // console.log(loading);
     console.log(error);
   return (
-    <div>
-        <div>{loading && 'Cargando...'}</div>
-        <ItemDetail detalle={detalle}/>
-    </div>
+    <>
+    {Object.keys(detalle).length <1
+       ? <div>{loading && 'Cargando...'}</div>
+       : <ItemDetail detalle={detalle}/>}
+    </>
   )
 }
 
