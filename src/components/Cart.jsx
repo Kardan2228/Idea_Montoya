@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <>
     <div>
-        <h1>aquí viene el renderizado de la lógica de CartContext</h1>
+        <h1>Aquí viene el renderizado de la lógica de CartContext</h1>
     </div>
     </>
   )
