@@ -1,9 +1,21 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import styles from "./Item.module.scss";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ detalle }) => {
   const { id, articulo, descripcion, imagen, precio, stock } = detalle;
 
+  const {addItem} = useContext(CartContext)
+
+  let initial = 1;
+  let stockLimite = stock;
+
+  const onAdd = (count) => {
+    alert(`Se han agregado ${count} prendas a la cesta.`);
+    addItem(detalle, count);
+    console.log(addItem);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.cardPrenda}>
@@ -16,7 +28,7 @@ const ItemDetail = ({ detalle }) => {
           <p className={styles.precio}>Precio: {precio}</p>
           <p className={styles.stock}>Stock: {stock}</p>
         </div>
-        <ItemCount item={detalle} />
+        <ItemCount detalle={detalle} initial={initial} stock={stockLimite} onAdd={onAdd} />
       </div>
     </div>
   );
