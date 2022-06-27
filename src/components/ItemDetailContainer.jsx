@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import ItemDetail from './ItemDetail';
-import data from '../helpers/data.js';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import data from '../helpers/data.js';
+import ItemDetail from './ItemDetail';
 
 
 export default function ItemDetailContainer() {
@@ -25,7 +25,7 @@ const [detalle, setDetalle] = useState({});
           })
           .catch((error) => {
             setError(true);
-            // console.log(error);
+            console.log(error);
           })
           .finally(() => {
             setLoading(false);
