@@ -38,11 +38,14 @@ export default function ItemListContainer() {
   // Pasamos por props a ItemList el array de prendas
   return (
     <>
+    {loading ? (
       <ProgressBar loading={loading} />
+      ) : (
       <div>
         <div>{error && 'Hubo un error al cargar los datos'}</div>
         <ItemList prendasMujer={prendasMujer} />
       </div>
+      )}
     </>
   )
 }

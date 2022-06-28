@@ -1,21 +1,50 @@
-.txtInf {
-  height: 100%;
-  width: 100%;
-  font-size: 36px;
-  font-weight: 600;
-  text-align: center;
-  //background-color: silver;
-  
-  animation-name: girar;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+.containerPB {
+    position: relative;
 }
 
-@keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin: -25px 0 0 -25px;
 }
+
+.loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border-top: 20px solid #8900FF;
+    border-right: 20px solid transparent;
+    animation: spinner8217 1s linear infinite;
+}
+
+@keyframes spinner8217 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// .txtInf {
+//     height: 100%;
+//     width: 100%;
+//     font-size: 36px;
+//     font-weight: 600;
+//     text-align: center;
+//     //background-color: silver;
+//     animation-name: girar;
+//     animation-duration: 2s;
+//     animation-iteration-count: infinite;
+// }
+// @keyframes girar {
+//     from {
+//         transform: rotate(0deg);
+//     }
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }

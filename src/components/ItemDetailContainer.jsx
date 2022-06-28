@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../helpers/data.js';
 import ItemDetail from './ItemDetail';
+import ProgressBar from './ProgressBar';
 
 
 export default function ItemDetailContainer() {
@@ -39,9 +40,20 @@ const [detalle, setDetalle] = useState({});
   return (
     <>
     {Object.keys(detalle).length <1
-       ? <div>{loading && 'Cargando...'}</div>
+       ? <ProgressBar loading={loading} />
        : <ItemDetail detalle={detalle}/>}
     </>
   )
 }
+
+// <>
+//     {loading ? (
+//       <ProgressBar loading={loading} />
+//       ) : (
+//       <div>
+//         <div>{error && 'Hubo un error al cargar los datos'}</div>
+//         <ItemList prendasMujer={prendasMujer} />
+//       </div>
+//       )}
+//     </>
 

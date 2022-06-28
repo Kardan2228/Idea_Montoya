@@ -56,7 +56,7 @@ const MyProvider = ({ children }) => {
     }
   
     // Limpia la cesta
-    const clearCart = () => {
+    const emptyCart = () => {
         setCart([])
     }
 
@@ -72,7 +72,7 @@ const MyProvider = ({ children }) => {
       }
 
     return (
-        <Provider value={{ cart, addItem, isInCart, clearCart, removeItem, getItemCount: getItemCount(cart), totalCart: totalCart(cart) }}>
+        <Provider value={{ cart, addItem, isInCart, emptyCart, removeItem, getItemCount: getItemCount(cart), totalCart: totalCart(cart) }}>
             {children}
         </Provider>
     )

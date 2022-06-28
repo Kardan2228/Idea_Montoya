@@ -1,12 +1,13 @@
 import React from "react";
-import style from './ProgressBar.module.scss'
+import style from "./ProgressBar.module.scss";
 
-const ProgressBar = ({loading}) => {
-    return (
-      <div className={style.containerPreloud}>
-          <div className={style.txtInf}>{loading && 'Cargando la información...'}</div>
+const ProgressBar = ({ loading }) => {
+  return (
+    <div className="containerPB">
+      <div className={style.loader}>
       </div>
-    )
-  }
-  
-  export default ProgressBar;
+    </div>
+  );
+};
+
+export default ProgressBar;
