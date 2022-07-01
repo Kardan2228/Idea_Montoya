@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
@@ -13,7 +14,6 @@ const ItemCount = ({ item }) => {
   const onAdd = (count) => {
     alert(`Se han agregado ${count} prendas a la cesta.`);
     addItem(item, count);
-    console.log(item, count);
   };
 
   const [count, setCount] = useState(initial);
