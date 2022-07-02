@@ -1,3 +1,4 @@
+import React from "react";
 import { initializeApp } from "firebase/app";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart.jsx";
@@ -21,7 +22,6 @@ initializeApp({
 });
 
   return (
-
     <MyProvider>
       <BrowserRouter>
         <NavBar/>
@@ -35,7 +35,6 @@ initializeApp({
         </Routes>
       </BrowserRouter>
     </MyProvider>
-    
   );
 }
 

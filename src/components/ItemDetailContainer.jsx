@@ -30,30 +30,6 @@ useEffect(() => {
   });
 }, [id]);
 
-
-    // useEffect(() => {
-
-    //     const itemDetalle = new Promise((res,) => {
-         
-    //         setTimeout(() => {
-    //             res(data.find(item => item.id === id));
-    //         }, 1000);
-    //     });
-
-    //     itemDetalle
-    //     .then((result) => {
-    //         setDetalle(result);
-    //       })
-    //       .catch((error) => {
-    //         setError(true);
-    //       })
-    //       .finally(() => {
-    //         setLoading(false);
-
-    //       })
-    //   }, [id]);
-    // console.log(error);
-
   return (
     <>
     {Object.keys(detalle).length <1

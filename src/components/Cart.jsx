@@ -50,8 +50,8 @@ const Cart = () => {
           <hr></hr>
           <div className="container">
             {cart.map((itemCart) => (
-              <>
-                <div className="row p-3 border">
+              
+                <div className="row p-3 border" key={itemCart.id}> 
                   <div className="col-sm ">
                     <button
                       style={{ marginRight: "10px" }}
@@ -98,7 +98,7 @@ const Cart = () => {
                     </h4>
                   </div>
                 </div>
-              </>
+             
             ))}
             <hr></hr>
             <div className="text-end">
