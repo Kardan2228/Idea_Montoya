@@ -24,11 +24,23 @@ const MyProvider = ({ children }) => {
         let positionItem = isInCart(item.id);
         if (positionItem === -1) {
             setCart([...cart, { ...item, cantidad: cantidad }])
+            // console.log(cart.cantidad)
         } else {
             let tempCart = [...cart]
             tempCart[positionItem].cantidad = tempCart[positionItem].cantidad + cantidad
             setCart(tempCart)
+            // let updateStock = [...cart]
+            // updateStock.stock = 15
+            // setCart(item.article, item.cantidad, item.category, item.color, item.stock = 20)
+            // console.log('En temCart', updateStock)
+            // console.log(cart)
         }
+        // console.log('antes de stock modificado', cart)
+        // cart['stock'] = 10
+        // console.log('después de stock modificado', cart)
+        
+        // item.stock = item.stock - item.cantidad;
+        //     console.log(item.stock)
     }
   
     // Limpia la cesta

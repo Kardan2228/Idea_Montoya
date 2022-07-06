@@ -2,6 +2,25 @@ import React from "react";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+// import swal from 'sweetalert';
+import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
+
+// const swal = withReactContent(Swal)
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2500,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  },
+  background: 'rgba(218, 247, 166, 0.7)'
+})
+
 
 const ItemCount = ({ item }) => {
   //const { id, articulo, descripcion, imagen, precio, stock } = item;
@@ -12,7 +31,19 @@ const ItemCount = ({ item }) => {
   let stockLimite = item.stock;
 
   const onAdd = (count) => {
-    alert(`Se han agregado ${count} prendas a la cesta.`);
+    let imgItem = item.image; 
+    // eslint-disable-next-line eqeqeq
+    let textToast = count != 1 ? (`Se han agregado ${count} prendas a la cesta.`) : (
+      `Se ha agregado ${count} prenda a la cesta.`
+    );
+
+   Toast.fire({
+    // icon: 'success',
+    imageUrl: imgItem,
+    imageHeight: 100,
+    // title: `Se han agregado ${count} prendas a la cesta.`
+    title: textToast
+  })
     addItem(item, count);
   };
 
@@ -52,7 +83,7 @@ const ItemCount = ({ item }) => {
           </div>
           <div className={"d-flex flex-row justify-content-center"}>
             <button
-              className={"btn btn-info"}
+              className={"btn btn-outline-secondary"}
               onClick={() => {
                 onAdd(count);
                 changeButton();
@@ -65,10 +96,10 @@ const ItemCount = ({ item }) => {
       ) : (
         <div className={"d-flex flex-row justify-content-center"}>
           <Link to="/Cart">
-            <button style={{marginRight: 10}} className={"btn btn-info"}>Ir a la cesta</button>
+            <button style={{marginRight: 10}} className={"btn btn-outline-secondary"}>Ir a la cesta</button>
           </Link>
           <Link to="/"> 
-            <button className={"btn btn-info"}>Seguir comprando</button>
+            <button className={"btn btn-outline-secondary"}>Seguir comprando</button>
           </Link>
         </div>
       )}

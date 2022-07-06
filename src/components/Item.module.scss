@@ -1,21 +1,24 @@
 /* Estilos de las cartas, funciona para el componente Item como para el componente ItemDetail*/
 
 .imgCard {
-    width: 100%;
     border-radius: 12px;
     height: 300px;
-    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
 }
 
 .container {
     max-width: 25rem;
     margin: 0 auto;
-    margin-top: 2vh;
+    margin-top: 10vh;
 }
 
 .cardPrenda {
     background-color: white;
     border: 1px solid #bacdd8;
+    width: 20rem;
     padding: 8px;
     border-radius: 12px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -35,40 +38,33 @@
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    background-color: silver;
+    // background-color: silver;
     margin-bottom: 3%;
 }
 
 p {
-    font-size: 14px;
+    font-size: 12px;
     color: #7f8c9b;
     line-height: 150%;
+    margin-top: 5px;
 }
 
 .precio {
     font-size: 16px;
     font-weight: 600;
-    margin-top: 16px;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 .stock {
     padding: 2%;
-    background-color: silver;
+    // background-color: silver;
     text-align: center;
     color: black;
     font-weight: 600;
+    margin-bottom: 1px;
 }
 
-// .enlaceBoton {
-//     font-family: verdana, arial, sans-serif;
-//     font-size: 10pt;
-//     font-weight: bold;
-//     padding: 4px;
-//     background-color: #ffffcc;
-//     color: #666666;
-//     text-decoration: none;
-// }
 .enlaceBoton {
     width: 110px;
     text-decoration: none;
@@ -90,13 +86,6 @@ p {
     color: #e0efff;
 }
 
-// .enlaceBoton:link,
-// .enlaceBoton:visited {
-//     border-top: 1px solid #cccccc;
-//     border-bottom: 2px solid #666666;
-//     border-left: 1px solid #cccccc;
-//     border-right: 2px solid #666666;
-// }
 .enlaceBoton:hover {
     border-bottom: 1px solid #cccccc;
     border-top: 2px solid #666666;

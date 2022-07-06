@@ -10,7 +10,7 @@ const Cart = () => {
   if (getItemCount === 0) {
     return (
       <>
-        <div>
+        <div style={{marginTop: '4rem'}}>
           <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
             ¡Ooops! tu cesta está vacía...
           </h1>
@@ -45,7 +45,7 @@ const Cart = () => {
   } else {
     return (
       <>
-        <div>
+        <div style={{marginTop: '4rem'}}>
           <h1 style={{ marginLeft: "20px" }}>Cesta</h1>
           <hr></hr>
           <div className="container">
