@@ -25,13 +25,19 @@ export default function PurchaseOrder() {
     };
     addDoc(orderCollection, orderPurchase).then(({ id }) => {
       setIdOrder(id);
-    swal({
-      title: id,
-      text: "Este es el folio de tu orden de compra, !ahora puedes realizar el pago!",
-      icon: "success",
-      button: "Pagar",
-    });
-
+      swal(
+        <div>
+          <h1>{id}</h1>
+          <p>
+            Este es el folio de tu orden de compra, !ahora puedes realizar el
+            pago!
+          </p>
+        </div>
+        // title: id,
+        // text: "Este es el folio de tu orden de compra, !ahora puedes realizar el pago!",
+        // icon: "success",
+        // button: "Pagar",
+      );
     });
     emptyCart();
     changeButton();
@@ -46,11 +52,10 @@ export default function PurchaseOrder() {
       <>
         <h1>Orden de compra</h1>
         <div className="container">
-          <h3></h3>
           <div className="row">
             <div className="col">
               <h5>1. Validación de cliente</h5>
-              <div className="shadow-lg p-3 mb-5 mt-4 rounded">
+              <div className="shadow-lg w-50 p-3 mb-5 mt-4 rounded">
                 <Formik
                   initialValues={{
                     name: "",
@@ -104,10 +109,17 @@ export default function PurchaseOrder() {
                   }}
                 >
                   {({ values, handleSubmit, errors, touched }) => (
-                    <Form onSubmit={handleSubmit}>
+                    <Form className="mb-3 p-3 h-50" onSubmit={handleSubmit}>
                       <div>
-                        <label htmlFor="nombre">Nombre</label>
+                        <label
+                          style={{ marginTop: "10px", fontWeight: "bold" }}
+                          className="form-label"
+                          htmlFor="nombre"
+                        >
+                          <stoeng>Nombre</stoeng>
+                        </label>
                         <Field
+                          className="form-control"
                           type="text"
                           name="name"
                           placeholder="John Doe"
@@ -115,12 +127,23 @@ export default function PurchaseOrder() {
                         />
                         <ErrorMessage
                           name="name"
-                          component={() => <div>{errors.name}</div>}
+                          component={() => (
+                            <div className="alert alert-danger">
+                              {errors.name}
+                            </div>
+                          )}
                         />
                       </div>
                       <div>
-                        <label htmlFor="correo">Correo</label>
+                        <label
+                          style={{ marginTop: "10px", fontWeight: "bold" }}
+                          className="form-label"
+                          htmlFor="correo"
+                        >
+                          Correo
+                        </label>
                         <Field
+                          className="form-control"
                           type="email"
                           name="email"
                           placeholder="correo@dominio.com"
@@ -128,12 +151,23 @@ export default function PurchaseOrder() {
                         />
                         <ErrorMessage
                           name="email"
-                          component={() => <div>{errors.email}</div>}
+                          component={() => (
+                            <div className="alert alert-danger">
+                              {errors.email}
+                            </div>
+                          )}
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone">Teléfono</label>
+                        <label
+                          style={{ marginTop: "10px", fontWeight: "bold" }}
+                          className="form-label"
+                          htmlFor="phone"
+                        >
+                          Teléfono
+                        </label>
                         <Field
+                          className="form-control"
                           type="tel"
                           name="phone"
                           placeholder="(555)-555-5555"
@@ -141,10 +175,18 @@ export default function PurchaseOrder() {
                         />
                         <ErrorMessage
                           name="phone"
-                          component={() => <div>{errors.phone}</div>}
+                          component={() => (
+                            <div className="alert alert-danger">
+                              {errors.phone}
+                            </div>
+                          )}
                         />
                       </div>
-                      <button className={"btn btn-success"} type="submit">
+                      <button
+                        style={{ marginTop: "15px" }}
+                        className="btn btn-success"
+                        type="submit"
+                      >
                         Enviar
                       </button>
                       {formSend && <p>¡Tu orden ha sido enviada con éxito!</p>}
@@ -220,7 +262,6 @@ export default function PurchaseOrder() {
                     className={"btn btn-success"}
                     style={{ marginTop: 20 }}
                     onClick={handleClic}
-                    
                   >
                     Enviar orden y pagar
                   </button>
@@ -230,7 +271,7 @@ export default function PurchaseOrder() {
           </div>
         ) : (
           <div className={"d-flex flex-row justify-content-center"}>
-              <button className={"btn btn-info"}>Realizar pago</button>
+            <button className={"btn btn-info"}>Realizar pago</button>
           </div>
         )}
       </>

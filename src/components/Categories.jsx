@@ -1,16 +1,9 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import {Link} from 'react-router-dom';
 
 export default function Categories() {
   const [category, setCategory] = useState([]);
-  const navButton = useRef(null);
-  const linksContainerRef = useRef(null);
-
-  function collapseNav() {
-    navButton.current.classList.add("collapsed");
-    linksContainerRef.current.classList.remove("show");
-  }
 
 
   useEffect(() => {
@@ -27,7 +20,7 @@ export default function Categories() {
     {
         category.map((itemCategory) => (
             <li className="nav-item" key={itemCategory}>
-              <Link onClick={collapseNav} className="nav-link" to={`/category/${itemCategory}`}>
+              <Link className="nav-link" to={`/category/${itemCategory}`}>
                 {itemCategory.charAt(0).toUpperCase() + itemCategory.slice(1)}
               </Link>
             </li>
