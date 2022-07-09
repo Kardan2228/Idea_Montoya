@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Item.module.scss";
 import ItemCount from "./ItemCount";
 

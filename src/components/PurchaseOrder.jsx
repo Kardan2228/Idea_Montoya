@@ -12,7 +12,6 @@ export default function PurchaseOrder() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [idOrder, setIdOrder] = useState("");
-
   const db = getFirestore();
   const orderCollection = collection(db, "orders");
   const [eventButton, setEventButton] = useState(true);
@@ -25,19 +24,12 @@ export default function PurchaseOrder() {
     };
     addDoc(orderCollection, orderPurchase).then(({ id }) => {
       setIdOrder(id);
-      swal(
-        <div>
-          <h1>{id}</h1>
-          <p>
-            Este es el folio de tu orden de compra, !ahora puedes realizar el
-            pago!
-          </p>
-        </div>
-        // title: id,
-        // text: "Este es el folio de tu orden de compra, !ahora puedes realizar el pago!",
-        // icon: "success",
-        // button: "Pagar",
-      );
+      swal({
+        title: id,
+        text: `${name}, este es el folio de tu orden de compra, por un precio de $${totalCart}.00. !Ahora puedes realizar el pago!`,
+        icon: "success",
+        button: "Pagar",
+      });
     });
     emptyCart();
     changeButton();
@@ -116,7 +108,7 @@ export default function PurchaseOrder() {
                           className="form-label"
                           htmlFor="nombre"
                         >
-                          <stoeng>Nombre</stoeng>
+                          <strong>Nombre</strong>
                         </label>
                         <Field
                           className="form-control"
@@ -206,13 +198,10 @@ export default function PurchaseOrder() {
           <div className="container">
             <h1>Orden de compra</h1>
             <div>
-              <h5>2. Verificación de datos y pedido</h5>
+              <h5 style={{marginTop: '1rem'}}>2. Verificación de datos y pedido</h5>
               <hr></hr>
               <div className="container">
                 <div className="fw-semibold">
-                  <p className="text-dark fs-6">
-                    Orden de compra: <span className="fw-bold">{idOrder} </span>
-                  </p>
                   <p className="text-dark fs-6">
                     Nombre: <span className="fw-bold">{name}</span>
                   </p>
@@ -270,9 +259,16 @@ export default function PurchaseOrder() {
             </div>
           </div>
         ) : (
-          <div className={"d-flex flex-row justify-content-center"}>
-            <button className={"btn btn-info"}>Realizar pago</button>
-          </div>
+          <>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div className={"d-flex flex-row justify-content-center"}>
+              <Link to="/">
+                <button className={"btn btn-success"}>Realizar pago</button>
+              </Link>
+            </div>
+          </>
         )}
       </>
     );

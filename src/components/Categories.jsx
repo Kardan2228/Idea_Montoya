@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import {Link} from 'react-router-dom';
+import styles from "./NavBar.module.scss";
 
 export default function Categories() {
   const [category, setCategory] = useState([]);
@@ -19,7 +20,7 @@ export default function Categories() {
     <>
     {
         category.map((itemCategory) => (
-            <li className="nav-item" key={itemCategory}>
+            <li className={styles.liDropDown} key={itemCategory}>
               <Link className="nav-link" to={`/category/${itemCategory}`}>
                 {itemCategory.charAt(0).toUpperCase() + itemCategory.slice(1)}
               </Link>
