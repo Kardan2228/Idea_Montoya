@@ -5,11 +5,9 @@
 Here you can see a preview of the functionalities of the online store.
 https://www.loom.com/share/2d1c730851b84334be1cbd3b1dc30d45
 
-## Deploy complete!
+## Deploy in vercel
 
-Project Console: https://console.firebase.google.com/project/abrigatestore-d970f/overview
-Hosting URL: https://abrigatestore-d970f.web.app
-
+https://idea-montoya-master.vercel.app/
 ## Structure and operation of the online store
 
 This online store is made up of a main view that has all the existing products in the database.
